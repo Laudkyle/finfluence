@@ -13,8 +13,16 @@ export default function App() {
 
   // Check if an intent is a false positive (legitimate) based on the string
   const isFalsePositive = (intent) => {
-    return intent.toLowerCase().includes("false positive");
+    const lowerIntent = intent.toLowerCase();
+    return (
+      lowerIntent.includes("false") ||
+      lowerIntent.includes("false positive") ||
+      lowerIntent.includes("generic") ||
+      lowerIntent.includes("neutral") ||
+      lowerIntent.includes("generic/neutral")
+    );
   };
+  
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
