@@ -145,7 +145,7 @@ export default function App() {
 
     try {
       const response = await fetch(
-        "https://e422-102-208-89-6.ngrok-free.app/predict",
+        "https://bb15-102-208-89-6.ngrok-free.app/predict",
         {
           method: "POST",
           headers: {
